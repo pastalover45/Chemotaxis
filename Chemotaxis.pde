@@ -1,15 +1,22 @@
+
+
+
 Bacteria[] colony;
 
-//PImage photoA;
 
  //declare bacteria variables here   
  void setup()   
  {     
  	//initialize bacteria variables here   
  	size(500,500);
- 		
+ 	int bacX;
+	int bacY;
+	int r;
+	int b;
+	int g;
  		colony = new Bacteria[1000]; 
- 		for (int i = 0; i< colony.length; i++){
+ 		for (int i = 0; i< colony.length; i++)
+ 		{
  			colony[i] = new Bacteria(250,250, 0,0,0);
  			//photoA = loadImage(*1yellow-star-th.png");
 
@@ -31,7 +38,7 @@ Bacteria[] colony;
  			colony[i].mouseMove();
 
  		}
- 	
+ 
 
 		// one = new Bacteria();
 		// one.move();
@@ -96,17 +103,6 @@ void show()
 		ellipse(bacX,bacY,10,10);
 		fill(255,255,255,20); 
 		ellipse(bacX,bacY,30,30);
-
-		// for(int y = 10 ; y <= 80 ; y +=10 ) //8 rows
-		// 	{
-  // 		for(int x = 20 ; x <= 70 ; x +=10 //6 columns
- 	// 			 {
-
-  //  				 ellipse(myX,myY,5,5);
-
-		// 		  }
-
-//}
 
 }
 
