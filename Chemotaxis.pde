@@ -1,6 +1,3 @@
-
-
-
 Bacteria[] colony;
 
 
@@ -9,28 +6,26 @@ Bacteria[] colony;
  {     
  	//initialize bacteria variables here   
  	size(500,500);
- 	int bacX;
-	int bacY;
-	int r;
-	int b;
-	int g;
+ 	background(2,13,32);
  		colony = new Bacteria[1000]; 
+
  		for (int i = 0; i< colony.length; i++)
  		{
  			colony[i] = new Bacteria(250,250, 0,0,0);
+ 			//ellispe(mouseX-50, mouseY-50, 30,30);
  			//photoA = loadImage(*1yellow-star-th.png");
-
  		}
-
-
-
  }   
+
+
 
  void draw()   
  {   	//move and show the bacteria    
- 	background(2,13,32);
- 	//image(photoA, mouseX-50, mouseY-50); 
- 
+ 	
+//image(photoA, mouseX-50, mouseY-50); 
+ ellispe(mouseX-50, mouseY-50, 30,30);
+
+
  	for (int i= 0; i< colony.length; i++){
  		{
  			colony[i].show();
@@ -38,52 +33,43 @@ Bacteria[] colony;
  			colony[i].mouseMove();
 
  		}
- 
 
-		// one = new Bacteria();
-		// one.move();
-		// one.show()
 }  
 
 
  class Bacteria    
  {     
 	//int myX, myY,bacPosition, bacColor;
-	int bacX;
-	int bacY;
-	int r;
-	int b;
-	int g;
+	// int bacX;
+	// int bacY;
+	// int r;
+	// int b;
+	// int g;
+
+	int bacX, bacY;
 
 }
 
 
-Bacteria (int x, )
+Bacteria (int x, int y)
 
-	bacteriaWalk(int x, int y, int r, int b, int g) //constructor
+	bacteriaWalk(int x, int y)
 
-	{
+	//, int r, int b, int g) //constructor
+{
 		//variable initializations here
 		
-	// 	myX = x;
-	// 	myY = y;
-	// //	bacPosition = (int)(Math.random()*100)+0;
-	// 	bacColor = fill(r,g,b);
-
 
 	bacX =x;
 	bacY= y;
-	r =colorRed;
-	b =colorBlue;
-	g =colorGreen;
+	//r =colorRed;
+	//b =colorBlue;
+	//g =colorGreen;
 
 	}
 
 
 void move() {
-
-// myX = myX + (int)(Math.random()*100)-1;
-// myY = myY + (int)(Math.random()*100)-1;
 
 bacX = bacX + (int)(Math.random()*15)-7;
 bacY = bacY + (int)(Math.random()*15)-7;
